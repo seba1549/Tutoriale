@@ -1,0 +1,23 @@
+package silnia;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String n;
+		int nl;
+		
+		n = JOptionPane.showInputDialog("Podaj liczbę, zktórej mam policzyć silnię: ");
+		nl = Integer.parseInt(n);
+		JOptionPane.showMessageDialog(null, "Silnia z " + nl + " wynosi " + silnia(nl), "Wynik", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	public static long silnia(int n){
+		long s = 1;
+		for(int i = 1; i <= n; i++){
+			s = s*i;
+		}
+		return s;
+	}
+}
