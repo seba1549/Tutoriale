@@ -1,0 +1,40 @@
+package me.seba1549.main;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+ 
+public class Main{
+ 
+    public static void main(String[] args) {
+        String nazwa;
+        
+        nazwa = JOptionPane.showInputDialog("Podaj nazwę pliku: ");
+        nazwa += ".txt";
+   
+        String dane = odczytaj(nazwa);
+        
+        JOptionPane.showMessageDialog(null, dane, "Teść Pliku", JOptionPane.INFORMATION_MESSAGE);
+
+    }
+
+    public static String odczytaj(String nazwa) {
+        File plik = new File(nazwa);
+        
+        String odczyt = "";
+        try {
+			@SuppressWarnings("resource")
+			Scanner skaner = new Scanner(plik);
+
+            while (skaner.hasNextLine()) {     	
+                odczyt += skaner.nextLine() + "\n";
+            }
+  
+        } catch (FileNotFoundException e) {
+        	JOptionPane.showMessageDialog(null, "Brak Pliku do odczytania!", "Teść Pliku", JOptionPane.INFORMATION_MESSAGE);
+        }
+        return odczyt;
+    }
+}
