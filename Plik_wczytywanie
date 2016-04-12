@@ -3,7 +3,6 @@ package me.seba1549.main;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
 import javax.swing.JOptionPane;
  
 public class Main{
@@ -16,8 +15,11 @@ public class Main{
    
         String dane = odczytaj(nazwa);
         
-        JOptionPane.showMessageDialog(null, dane, "Teść Pliku", JOptionPane.INFORMATION_MESSAGE);
-
+        if(!(dane.equals(""))){
+        	
+        	JOptionPane.showMessageDialog(null, dane, "Treść pliku", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
     }
 
     public static String odczytaj(String nazwa) {
@@ -33,7 +35,7 @@ public class Main{
             }
   
         } catch (FileNotFoundException e) {
-        	JOptionPane.showMessageDialog(null, "Brak Pliku do odczytania!", "Teść Pliku", JOptionPane.INFORMATION_MESSAGE);
+        	JOptionPane.showMessageDialog(null, "Brak pliku do odczytania!", "Treść pliku", JOptionPane.INFORMATION_MESSAGE);
         }
         return odczyt;
     }
