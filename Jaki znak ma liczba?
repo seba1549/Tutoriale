@@ -1,0 +1,23 @@
+package liczba;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String n;
+		double nl;
+		
+		n = JOptionPane.showInputDialog("Podaj jakąś liczbę: ");
+		nl = Double.parseDouble(n);
+		
+		if(nl > 0){
+			JOptionPane.showMessageDialog(null, "Liczba ta jest dodatnia!", "KOMUNIKAT", JOptionPane.INFORMATION_MESSAGE);
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "Liczba ta jest ujemna!", "KOMUNIKAT", JOptionPane.INFORMATION_MESSAGE);
+		}
+
+	}
+
+}
