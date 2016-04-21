@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+
+public class wzor_herona {
+
+	public static void main(String[] args) {
+	
+		String a,b,c;
+		double al, bl, cl, p, Pole;
+		System.out.println("Oblicznie pola trójkąta");
+		
+		a=JOptionPane.showInputDialog("Podaj bok a");
+		al=Double.parseDouble(a);
+		b=JOptionPane.showInputDialog("Podaj bok b");
+		bl=Double.parseDouble(a);
+		c=JOptionPane.showInputDialog("Podaj bok c");
+		cl=Double.parseDouble(c);
+		
+		
+		p=((al+bl+cl)/2);
+		Pole=(p*(p-al)*(p-bl)*(p-cl));
+		Pole=Math.sqrt(Pole);
+		
+		JOptionPane.showMessageDialog(null, "Pole trojkata wynosi Pole rowna sie 5"+ Pole, "WYNIK",JOptionPane.INFORMATION_MESSAGE);
+		
+
+	}
+}
