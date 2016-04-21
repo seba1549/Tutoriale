@@ -1,0 +1,89 @@
+package cos;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Fibonac_1();
+		}
+
+		public static void Fibonac()
+		{
+			int poprzednia, biezaca, pomoc, licznik, n;
+			String odp, wynik;
+			int linia = 10;
+			odp = JOptionPane.showInputDialog("Ile liczb wygenerować?");
+			n = Integer .parseInt(odp);
+			poprzednia = 0;
+			biezaca = 1;
+			wynik = "";
+			wynik += poprzednia + " " + biezaca + "";
+			for (licznik = 3; licznik <= n; licznik++) {
+			pomoc = poprzednia + biezaca;
+			poprzednia = biezaca;
+			biezaca = pomoc;
+			wynik += biezaca + " ";
+			if (licznik %linia == 0 )
+			wynik += '\n';;
+			}
+			
+			JOptionPane.showMessageDialog(null, wynik, "Liczby Fibonacciego ", JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0) ;
+	}
+		
+		
+		public static void Fibonac_1()
+		{
+			int poprzednia, biezaca, pomoc, licznik, n;
+			String odp, wynik;
+			int linia = 10;
+			odp = JOptionPane.showInputDialog("Ile liczb wygenerować?");
+			n = Integer .parseInt(odp);
+			poprzednia = 0;
+			biezaca = 1;
+			wynik = "";
+			wynik += poprzednia + " " + biezaca + "";
+			licznik = 3;
+			while(licznik <= n){
+				pomoc = poprzednia + biezaca;
+				poprzednia = biezaca;
+				biezaca = pomoc;
+				wynik += biezaca + " ";
+				if (licznik %linia == 0 )
+				wynik += '\n';;
+				licznik++;
+			}
+			
+			JOptionPane.showMessageDialog(null, wynik, "Liczby Fibonacciego ", JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0) ;
+	}
+		
+		
+		public static void Fibonac_2()
+		{
+			int poprzednia, biezaca, pomoc, licznik, n;
+			String odp, wynik;
+			int linia = 10;
+			odp = JOptionPane.showInputDialog("Ile liczb wygenerować?");
+			n = Integer .parseInt(odp);
+			poprzednia = 0;
+			biezaca = 1;
+			wynik = "";
+			wynik += poprzednia + " " + biezaca + "";
+			licznik = 3;
+			do{
+				pomoc = poprzednia + biezaca;
+				poprzednia = biezaca;
+				biezaca = pomoc;
+				wynik += biezaca + " ";
+				if (licznik %linia == 0 )
+				wynik += '\n';;
+				licznik++;
+			}while(licznik <= n);
+			
+			JOptionPane.showMessageDialog(null, wynik, "Liczby Fibonacciego ", JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0) ;
+	}
+
+}
