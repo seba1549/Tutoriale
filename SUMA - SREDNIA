@@ -1,0 +1,32 @@
+package me.seba1549.main;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String n;
+		int nl;
+		double suma = 0, srednia, dzielnik;
+		
+		
+		n = JOptionPane.showInputDialog("Podaj ilość liczb z których beziesz chciał policzyć sumę i średnią (Tylko liczby całkowite: ");
+		nl = Integer.parseInt(n);
+		
+		dzielnik = nl;
+		
+		for(int i = 1; i <= nl; i++){
+			String a;
+			double al;
+			a = JOptionPane.showInputDialog("Podaj " + i + " liczbe: ");
+			al = Double.parseDouble(a);
+
+			suma += al;
+		}
+
+		srednia = suma/dzielnik;
+		
+		JOptionPane.showMessageDialog(null, "Syma = " + suma + " | średnia = " + srednia, "Wyniki:", JOptionPane.INFORMATION_MESSAGE);
+	}
+
+}
