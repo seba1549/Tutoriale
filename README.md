@@ -1,2 +1,0 @@
-# Tutoriale
-Macie łaki
